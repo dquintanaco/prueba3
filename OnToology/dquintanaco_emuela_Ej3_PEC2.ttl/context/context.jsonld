@@ -1,0 +1,104 @@
+{
+  "@context" : {
+    "Country" : {
+      "@id" : "http://example.org/ontology#Country"
+    },
+    "MediumValue" : {
+      "@id" : "http://example.org/ontology#MediumValue"
+    },
+    "Recommended" : {
+      "@id" : "http://example.org/ontology#Recommended"
+    },
+    "reviewDate" : {
+      "@id" : "http://example.org/ontology#reviewDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "CoupleLeisure" : {
+      "@id" : "http://example.org/ontology#CoupleLeisure"
+    },
+    "hasDestination" : {
+      "@id" : "http://example.org/ontology#hasDestination",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "hasDatePublished" : {
+      "@id" : "http://example.org/ontology#hasDatePublished",
+      "@type" : "@id"
+    },
+    "FirstClass" : {
+      "@id" : "http://example.org/ontology#FirstClass"
+    },
+    "Business" : {
+      "@id" : "http://example.org/ontology#Business"
+    },
+    "Date" : {
+      "@id" : "http://example.org/ontology#Date"
+    },
+    "Traveller" : {
+      "@id" : "http://example.org/ontology#Traveller"
+    },
+    "hasDateFlight" : {
+      "@id" : "http://example.org/ontology#hasDateFlight",
+      "@type" : "@id"
+    },
+    "LowValue" : {
+      "@id" : "http://example.org/ontology#LowValue"
+    },
+    "HightValue" : {
+      "@id" : "http://example.org/ontology#HightValue"
+    },
+    "Survey" : {
+      "@id" : "http://example.org/ontology#Survey"
+    },
+    "FamilyLeisure" : {
+      "@id" : "http://example.org/ontology#FamilyLeisure"
+    },
+    "Rating" : {
+      "@id" : "http://example.org/ontology#Rating"
+    },
+    "Aircraft" : {
+      "@id" : "http://example.org/ontology#Aircraft"
+    },
+    "SoloTraveller" : {
+      "@id" : "http://example.org/ontology#SoloTraveller"
+    },
+    "ratingValue" : {
+      "@id" : "http://example.org/ontology#ratingValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Boeing" : {
+      "@id" : "http://example.org/ontology#Boeing"
+    },
+    "AirBus" : {
+      "@id" : "http://example.org/ontology#AirBus"
+    },
+    "City" : {
+      "@id" : "http://example.org/ontology#City"
+    },
+    "EconomyClass" : {
+      "@id" : "http://example.org/ontology#EconomyClass"
+    },
+    "hasOrigin" : {
+      "@id" : "http://example.org/ontology#hasOrigin",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "BusinessClass" : {
+      "@id" : "http://example.org/ontology#BusinessClass"
+    },
+    "hasCountry" : {
+      "@id" : "http://example.org/ontology#hasCountry",
+      "@type" : "@id"
+    },
+    "SeatType" : {
+      "@id" : "http://example.org/ontology#SeatType"
+    }
+  }
+}

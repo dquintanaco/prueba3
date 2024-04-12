@@ -1,0 +1,359 @@
+@prefix : <http://www.semanticweb.org/emili/ontologies/2024/3/flysatisfaction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/emili/ontologies/2024/3/flysatisfaction#> .
+
+<http://www.semanticweb.org/emili/ontologies/2024/3/flysatisfaction> rdf:type owl:Ontology ;
+                                                                      owl:versionIRI <urn:absolute:1.0.0> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/ontology#hasCountry
+<http://example.org/ontology#hasCountry> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <http://example.org/ontology#Survey> ;
+                                         rdfs:range <http://example.org/ontology#Country> ;
+                                         rdfs:comment "Specifies the country associated with an entity" ;
+                                         rdfs:label "hasCountry" .
+
+
+###  http://example.org/ontology#hasDateFlight
+<http://example.org/ontology#hasDateFlight> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://example.org/ontology#Survey> ;
+                                            rdfs:range <http://example.org/ontology#Date> ;
+                                            rdfs:comment "Specifies the exact date associated with an event" ;
+                                            rdfs:label "hasDateFlight" .
+
+
+###  http://example.org/ontology#hasDatePublished
+<http://example.org/ontology#hasDatePublished> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://example.org/ontology#Survey> ;
+                                               rdfs:range <http://example.org/ontology#Date> ;
+                                               rdfs:comment "\"Specifies the exact date associated with a review" ;
+                                               rdfs:label "hasDatePublished" .
+
+
+###  http://example.org/ontology#hasDestination
+<http://example.org/ontology#hasDestination> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://example.org/ontology#Survey> ;
+                                             rdfs:range <http://example.org/ontology#City> ;
+                                             rdfs:comment "This property defines the end point of a flight" ;
+                                             rdfs:label "hasDestination" .
+
+
+###  http://example.org/ontology#hasOrigin
+<http://example.org/ontology#hasOrigin> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://example.org/ontology#Survey> ;
+                                        rdfs:range <http://example.org/ontology#City> ;
+                                        rdfs:comment "This property specifies the starting point of a flight" ;
+                                        rdfs:label "hasOrigin" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/ontology#ratingValue
+<http://example.org/ontology#ratingValue> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <http://example.org/ontology#Survey> ;
+                                          rdfs:range xsd:integer ;
+                                          rdfs:comment "Numerical rating given to an airline, flight, or service, usually on a scale from 1 to 10" ;
+                                          rdfs:label "ratingValue" .
+
+
+###  http://example.org/ontology#reviewDate
+<http://example.org/ontology#reviewDate> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://example.org/ontology#Survey> ;
+                                         rdfs:range xsd:dateTime ;
+                                         rdfs:comment "The date on which the review was published" ;
+                                         rdfs:label "reviewDate" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/ontology#AirBus
+<http://example.org/ontology#AirBus> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://example.org/ontology#Aircraft> ;
+                                     rdfs:comment "A European multinational aerospace corporation" ;
+                                     rdfs:label "AirBus" .
+
+
+###  http://example.org/ontology#Aircraft
+<http://example.org/ontology#Aircraft> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://example.org/ontology#Survey> ;
+                                       rdfs:comment "The type or model of airplane used for a flight" ;
+                                       rdfs:label "Aircraft" .
+
+
+###  http://example.org/ontology#Boeing
+<http://example.org/ontology#Boeing> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://example.org/ontology#Aircraft> ;
+                                     rdfs:comment "An American multinational corporation that designs" ;
+                                     rdfs:label "Boeing" .
+
+
+###  http://example.org/ontology#Business
+<http://example.org/ontology#Business> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://example.org/ontology#Traveller> ;
+                                       rdfs:comment "A traveller flying for business purposes" ;
+                                       rdfs:label "Business" .
+
+
+###  http://example.org/ontology#BusinessClass
+<http://example.org/ontology#BusinessClass> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://example.org/ontology#SeatType> ;
+                                            rdfs:comment "A class offering enhanced comfort, service, and amenities, targeted at business travellers or those seeking a premium experience" ;
+                                            rdfs:label "BusinessClass" .
+
+
+###  http://example.org/ontology#City
+<http://example.org/ontology#City> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://example.org/ontology#Survey> ;
+                                   rdfs:comment "A designated area or locality within a country" ;
+                                   rdfs:label "City" .
+
+
+###  http://example.org/ontology#Country
+<http://example.org/ontology#Country> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://example.org/ontology#Survey> ;
+                                      rdfs:comment "A designated area or locality within a country" ;
+                                      rdfs:label "Country" .
+
+
+###  http://example.org/ontology#CoupleLeisure
+<http://example.org/ontology#CoupleLeisure> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://example.org/ontology#Traveller> ;
+                                            rdfs:comment "A pair of travellers on leisure, often sharing experiences and feedback about their journey" ;
+                                            rdfs:label "CoupleLeisure" .
+
+
+###  http://example.org/ontology#Date
+<http://example.org/ontology#Date> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://example.org/ontology#Survey> ;
+                                   rdfs:comment "The date on which the flight is scheduled to occur" ;
+                                   rdfs:label "Date" .
+
+
+###  http://example.org/ontology#EconomyClass
+<http://example.org/ontology#EconomyClass> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://example.org/ontology#SeatType> ;
+                                           rdfs:comment "The basic seating class, offering standard services and amenities" ;
+                                           rdfs:label "EconomyClass" .
+
+
+###  http://example.org/ontology#FamilyLeisure
+<http://example.org/ontology#FamilyLeisure> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://example.org/ontology#Traveller> ;
+                                            rdfs:comment "Travellers flying as a family unit, including adults and children, with specific needs for their travel experience" ;
+                                            rdfs:label "FamilyLeisure" .
+
+
+###  http://example.org/ontology#FirstClass
+<http://example.org/ontology#FirstClass> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://example.org/ontology#SeatType> ;
+                                         rdfs:comment "The highest level of service and comfort on a flight, with exclusive amenities and personalized services" ;
+                                         rdfs:label "FirstClass" .
+
+
+###  http://example.org/ontology#HightValue
+<http://example.org/ontology#HightValue> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://example.org/ontology#Rating> ;
+                                         rdfs:comment "Indicates items, assessments, or entities that are of superior quality or importance" ;
+                                         rdfs:label "HighValue" .
+
+
+###  http://example.org/ontology#LowValue
+<http://example.org/ontology#LowValue> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://example.org/ontology#Rating> ;
+                                       rdfs:comment "Signifies items, assessments, or entities that fall short in terms of quality, performance, or satisfaction" ;
+                                       rdfs:label "LowValue" .
+
+
+###  http://example.org/ontology#MediumValue
+<http://example.org/ontology#MediumValue> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://example.org/ontology#Rating> ;
+                                          rdfs:comment "Denotes items, assessments, or entities that meet general expectations in quality and performance but do not reach the highest standards" ;
+                                          rdfs:label "MediumValue" .
+
+
+###  http://example.org/ontology#Rating
+<http://example.org/ontology#Rating> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://example.org/ontology#Survey> ;
+                                     rdfs:comment "A numeric score or qualitative assessment given to a service feature, flight, or airline overall" ;
+                                     rdfs:label "Rating" .
+
+
+###  http://example.org/ontology#Recommended
+<http://example.org/ontology#Recommended> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://example.org/ontology#Survey> ;
+                                          rdfs:comment "Indicates whether a reviewer recommends the airline or flight based on their experience" ;
+                                          rdfs:label "Recommended" .
+
+
+###  http://example.org/ontology#SeatType
+<http://example.org/ontology#SeatType> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://example.org/ontology#Survey> ;
+                                       rdfs:comment "The class or type of seating chosen by the traveller, affecting comfort and amenities" ;
+                                       rdfs:label "SeatType" .
+
+
+###  http://example.org/ontology#SoloTraveller
+<http://example.org/ontology#SoloTraveller> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://example.org/ontology#Traveller> ;
+                                            rdfs:comment "A traveller who flies alone" ;
+                                            rdfs:label "SoloTraveller" .
+
+
+###  http://example.org/ontology#Survey
+<http://example.org/ontology#Survey> rdf:type owl:Class ;
+                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/ontology#hasCountry> ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass <http://example.org/ontology#Country>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/ontology#hasDateFlight> ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass <http://example.org/ontology#Date>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/ontology#hasDatePublished> ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass <http://example.org/ontology#Date>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/ontology#hasDestination> ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass <http://example.org/ontology#City>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://example.org/ontology#hasOrigin> ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass <http://example.org/ontology#City>
+                                                     ] ;
+                                     rdfs:comment "A collection or set of questions aimed at gathering information from respondents to derive insights on various topics" ;
+                                     rdfs:label "Survey" .
+
+
+###  http://example.org/ontology#Traveller
+<http://example.org/ontology#Traveller> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://example.org/ontology#Survey> ;
+                                        rdfs:comment "An individual who travels" ;
+                                        rdfs:label "Traveller" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/ontology#AirBus380
+<http://example.org/ontology#AirBus380> rdf:type owl:NamedIndividual ,
+                                                 <http://example.org/ontology#AirBus> ;
+                                        rdfs:comment "Type of plane" ;
+                                        rdfs:label "AirBus380" ;
+                                        rdfs:sameAs "https://dbpedia.org/page/Airbus_A380"^^xsd:anyURI .
+
+
+###  http://example.org/ontology#Barcelona
+<http://example.org/ontology#Barcelona> rdf:type owl:NamedIndividual ,
+                                                 <http://example.org/ontology#City> ;
+                                        rdfs:comment "City" ;
+                                        rdfs:label "Barcelona" ;
+                                        rdfs:sameAs "https://dbpedia.org/page/List_of_international_airports_by_country"^^xsd:anyURI .
+
+
+###  http://example.org/ontology#DateFlight
+<http://example.org/ontology#DateFlight> rdf:type owl:NamedIndividual ,
+                                                  <http://example.org/ontology#Date> ;
+                                         rdfs:comment "Date of flight" ;
+                                         rdfs:label "DateFlight" .
+
+
+###  http://example.org/ontology#DatePublished
+<http://example.org/ontology#DatePublished> rdf:type owl:NamedIndividual ,
+                                                     <http://example.org/ontology#Date> ;
+                                            rdfs:comment "Date of published" ;
+                                            rdfs:label "DatePublished" .
+
+
+###  http://example.org/ontology#David
+<http://example.org/ontology#David> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/ontology#SoloTraveller> ;
+                                    rdfs:comment "Traveller" ;
+                                    rdfs:label "David" .
+
+
+###  http://example.org/ontology#Emilio
+<http://example.org/ontology#Emilio> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/ontology#Business> ;
+                                     rdfs:comment "Traveller" ;
+                                     rdfs:label "Emilio" .
+
+
+###  http://example.org/ontology#Madrid
+<http://example.org/ontology#Madrid> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/ontology#City> ;
+                                     rdfs:comment "City" ;
+                                     rdfs:label "Madrid" ;
+                                     rdfs:sameAs "https://dbpedia.org/page/List_of_international_airports_by_country"^^xsd:anyURI .
+
+
+###  http://example.org/ontology#Spain
+<http://example.org/ontology#Spain> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/ontology#Country> ;
+                                    rdfs:label "Country" ,
+                                               "Spain" ;
+                                    rdfs:sameAs "https://dbpedia.org/page/Category:Countries"^^xsd:anyURI .
+
+
+###  http://example.org/ontology#Survey1
+<http://example.org/ontology#Survey1> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/ontology#Survey> ;
+                                      <http://example.org/ontology#hasCountry> <http://example.org/ontology#Spain> ;
+                                      <http://example.org/ontology#hasDateFlight> <http://example.org/ontology#DateFlight> ;
+                                      <http://example.org/ontology#hasDatePublished> <http://example.org/ontology#DatePublished> ;
+                                      <http://example.org/ontology#hasDestination> <http://example.org/ontology#Madrid> ;
+                                      <http://example.org/ontology#hasOrigin> <http://example.org/ontology#Barcelona> ;
+                                      <http://example.org/ontology#ratingValue> 7 ;
+                                      <http://example.org/ontology#reviewDate> "2024-04-11T14:00:00"^^xsd:dateTime .
+
+
+###  http://example.org/ontology#Survey2
+<http://example.org/ontology#Survey2> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/ontology#Survey> ;
+                                      <http://example.org/ontology#hasCountry> <http://example.org/ontology#Spain> ;
+                                      <http://example.org/ontology#hasDateFlight> <http://example.org/ontology#DateFlight> ;
+                                      <http://example.org/ontology#hasDatePublished> <http://example.org/ontology#DatePublished> ;
+                                      <http://example.org/ontology#hasDestination> <http://example.org/ontology#Madrid> ;
+                                      <http://example.org/ontology#hasOrigin> <http://example.org/ontology#Barcelona> ;
+                                      <http://example.org/ontology#ratingValue> 9 ;
+                                      <http://example.org/ontology#reviewDate> "2024-04-11T14:00:00"^^xsd:dateTime .
+
+
+###  http://example.org/ontology#Survey3
+<http://example.org/ontology#Survey3> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/ontology#Survey> ;
+                                      <http://example.org/ontology#hasCountry> <http://example.org/ontology#Spain> ;
+                                      <http://example.org/ontology#hasDateFlight> <http://example.org/ontology#DateFlight> ;
+                                      <http://example.org/ontology#hasDatePublished> <http://example.org/ontology#DatePublished> ;
+                                      <http://example.org/ontology#hasDestination> <http://example.org/ontology#Madrid> ;
+                                      <http://example.org/ontology#hasOrigin> <http://example.org/ontology#Barcelona> ;
+                                      <http://example.org/ontology#ratingValue> 2 ;
+                                      <http://example.org/ontology#reviewDate> "2024-04-11T14:00:00"^^xsd:dateTime .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
