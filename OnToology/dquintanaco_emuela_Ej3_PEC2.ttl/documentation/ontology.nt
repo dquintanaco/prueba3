@@ -1,0 +1,335 @@
+<http://www.semanticweb.org/emili/ontologies/2024/3/flysatisfaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/emili/ontologies/2024/3/flysatisfaction> <http://www.w3.org/2002/07/owl#versionIRI> <urn:absolute:1.0.0> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/ontology#hasCountry
+<http://example.org/ontology#hasCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/ontology#hasCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#hasCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/ontology#Country> .
+<http://example.org/ontology#hasCountry> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the country associated with an entity" .
+<http://example.org/ontology#hasCountry> <http://www.w3.org/2000/01/rdf-schema#label> "hasCountry" .
+# 
+# http://example.org/ontology#hasDateFlight
+<http://example.org/ontology#hasDateFlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/ontology#hasDateFlight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#hasDateFlight> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/ontology#Date> .
+<http://example.org/ontology#hasDateFlight> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the exact date associated with an event" .
+<http://example.org/ontology#hasDateFlight> <http://www.w3.org/2000/01/rdf-schema#label> "hasDateFlight" .
+# 
+# http://example.org/ontology#hasDatePublished
+<http://example.org/ontology#hasDatePublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/ontology#hasDatePublished> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#hasDatePublished> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/ontology#Date> .
+<http://example.org/ontology#hasDatePublished> <http://www.w3.org/2000/01/rdf-schema#comment> "\"Specifies the exact date associated with a review" .
+<http://example.org/ontology#hasDatePublished> <http://www.w3.org/2000/01/rdf-schema#label> "hasDatePublished" .
+# 
+# http://example.org/ontology#hasDestination
+<http://example.org/ontology#hasDestination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/ontology#hasDestination> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#hasDestination> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/ontology#City> .
+<http://example.org/ontology#hasDestination> <http://www.w3.org/2000/01/rdf-schema#comment> "This property defines the end point of a flight" .
+<http://example.org/ontology#hasDestination> <http://www.w3.org/2000/01/rdf-schema#label> "hasDestination" .
+# 
+# http://example.org/ontology#hasOrigin
+<http://example.org/ontology#hasOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/ontology#hasOrigin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#hasOrigin> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/ontology#City> .
+<http://example.org/ontology#hasOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the starting point of a flight" .
+<http://example.org/ontology#hasOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "hasOrigin" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/ontology#ratingValue
+<http://example.org/ontology#ratingValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/ontology#ratingValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#ratingValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/ontology#ratingValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Numerical rating given to an airline, flight, or service, usually on a scale from 1 to 10" .
+<http://example.org/ontology#ratingValue> <http://www.w3.org/2000/01/rdf-schema#label> "ratingValue" .
+# 
+# http://example.org/ontology#reviewDate
+<http://example.org/ontology#reviewDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/ontology#reviewDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#reviewDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://example.org/ontology#reviewDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date on which the review was published" .
+<http://example.org/ontology#reviewDate> <http://www.w3.org/2000/01/rdf-schema#label> "reviewDate" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://example.org/ontology#AirBus
+<http://example.org/ontology#AirBus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#AirBus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Aircraft> .
+<http://example.org/ontology#AirBus> <http://www.w3.org/2000/01/rdf-schema#comment> "A European multinational aerospace corporation" .
+<http://example.org/ontology#AirBus> <http://www.w3.org/2000/01/rdf-schema#label> "AirBus" .
+# 
+# http://example.org/ontology#Aircraft
+<http://example.org/ontology#Aircraft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#Aircraft> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#Aircraft> <http://www.w3.org/2000/01/rdf-schema#comment> "The type or model of airplane used for a flight" .
+<http://example.org/ontology#Aircraft> <http://www.w3.org/2000/01/rdf-schema#label> "Aircraft" .
+# 
+# http://example.org/ontology#Boeing
+<http://example.org/ontology#Boeing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#Boeing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Aircraft> .
+<http://example.org/ontology#Boeing> <http://www.w3.org/2000/01/rdf-schema#comment> "An American multinational corporation that designs" .
+<http://example.org/ontology#Boeing> <http://www.w3.org/2000/01/rdf-schema#label> "Boeing" .
+# 
+# http://example.org/ontology#Business
+<http://example.org/ontology#Business> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#Business> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Traveller> .
+<http://example.org/ontology#Business> <http://www.w3.org/2000/01/rdf-schema#comment> "A traveller flying for business purposes" .
+<http://example.org/ontology#Business> <http://www.w3.org/2000/01/rdf-schema#label> "Business" .
+# 
+# http://example.org/ontology#BusinessClass
+<http://example.org/ontology#BusinessClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#BusinessClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#SeatType> .
+<http://example.org/ontology#BusinessClass> <http://www.w3.org/2000/01/rdf-schema#comment> "A class offering enhanced comfort, service, and amenities, targeted at business travellers or those seeking a premium experience" .
+<http://example.org/ontology#BusinessClass> <http://www.w3.org/2000/01/rdf-schema#label> "BusinessClass" .
+# 
+# http://example.org/ontology#City
+<http://example.org/ontology#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#City> <http://www.w3.org/2000/01/rdf-schema#comment> "A designated area or locality within a country" .
+<http://example.org/ontology#City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
+# 
+# http://example.org/ontology#Country
+<http://example.org/ontology#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "A designated area or locality within a country" .
+<http://example.org/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
+# 
+# http://example.org/ontology#CoupleLeisure
+<http://example.org/ontology#CoupleLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#CoupleLeisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Traveller> .
+<http://example.org/ontology#CoupleLeisure> <http://www.w3.org/2000/01/rdf-schema#comment> "A pair of travellers on leisure, often sharing experiences and feedback about their journey" .
+<http://example.org/ontology#CoupleLeisure> <http://www.w3.org/2000/01/rdf-schema#label> "CoupleLeisure" .
+# 
+# http://example.org/ontology#Date
+<http://example.org/ontology#Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#Date> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#Date> <http://www.w3.org/2000/01/rdf-schema#comment> "The date on which the flight is scheduled to occur" .
+<http://example.org/ontology#Date> <http://www.w3.org/2000/01/rdf-schema#label> "Date" .
+# 
+# http://example.org/ontology#EconomyClass
+<http://example.org/ontology#EconomyClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#EconomyClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#SeatType> .
+<http://example.org/ontology#EconomyClass> <http://www.w3.org/2000/01/rdf-schema#comment> "The basic seating class, offering standard services and amenities" .
+<http://example.org/ontology#EconomyClass> <http://www.w3.org/2000/01/rdf-schema#label> "EconomyClass" .
+# 
+# http://example.org/ontology#FamilyLeisure
+<http://example.org/ontology#FamilyLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#FamilyLeisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Traveller> .
+<http://example.org/ontology#FamilyLeisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Travellers flying as a family unit, including adults and children, with specific needs for their travel experience" .
+<http://example.org/ontology#FamilyLeisure> <http://www.w3.org/2000/01/rdf-schema#label> "FamilyLeisure" .
+# 
+# http://example.org/ontology#FirstClass
+<http://example.org/ontology#FirstClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#FirstClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#SeatType> .
+<http://example.org/ontology#FirstClass> <http://www.w3.org/2000/01/rdf-schema#comment> "The highest level of service and comfort on a flight, with exclusive amenities and personalized services" .
+<http://example.org/ontology#FirstClass> <http://www.w3.org/2000/01/rdf-schema#label> "FirstClass" .
+# 
+# http://example.org/ontology#HightValue
+<http://example.org/ontology#HightValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#HightValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Rating> .
+<http://example.org/ontology#HightValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates items, assessments, or entities that are of superior quality or importance" .
+<http://example.org/ontology#HightValue> <http://www.w3.org/2000/01/rdf-schema#label> "HighValue" .
+# 
+# http://example.org/ontology#LowValue
+<http://example.org/ontology#LowValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#LowValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Rating> .
+<http://example.org/ontology#LowValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Signifies items, assessments, or entities that fall short in terms of quality, performance, or satisfaction" .
+<http://example.org/ontology#LowValue> <http://www.w3.org/2000/01/rdf-schema#label> "LowValue" .
+# 
+# http://example.org/ontology#MediumValue
+<http://example.org/ontology#MediumValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#MediumValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Rating> .
+<http://example.org/ontology#MediumValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes items, assessments, or entities that meet general expectations in quality and performance but do not reach the highest standards" .
+<http://example.org/ontology#MediumValue> <http://www.w3.org/2000/01/rdf-schema#label> "MediumValue" .
+# 
+# http://example.org/ontology#Rating
+<http://example.org/ontology#Rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#Rating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#Rating> <http://www.w3.org/2000/01/rdf-schema#comment> "A numeric score or qualitative assessment given to a service feature, flight, or airline overall" .
+<http://example.org/ontology#Rating> <http://www.w3.org/2000/01/rdf-schema#label> "Rating" .
+# 
+# http://example.org/ontology#Recommended
+<http://example.org/ontology#Recommended> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#Recommended> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#Recommended> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a reviewer recommends the airline or flight based on their experience" .
+<http://example.org/ontology#Recommended> <http://www.w3.org/2000/01/rdf-schema#label> "Recommended" .
+# 
+# http://example.org/ontology#SeatType
+<http://example.org/ontology#SeatType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#SeatType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#SeatType> <http://www.w3.org/2000/01/rdf-schema#comment> "The class or type of seating chosen by the traveller, affecting comfort and amenities" .
+<http://example.org/ontology#SeatType> <http://www.w3.org/2000/01/rdf-schema#label> "SeatType" .
+# 
+# http://example.org/ontology#SoloTraveller
+<http://example.org/ontology#SoloTraveller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#SoloTraveller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Traveller> .
+<http://example.org/ontology#SoloTraveller> <http://www.w3.org/2000/01/rdf-schema#comment> "A traveller who flies alone" .
+<http://example.org/ontology#SoloTraveller> <http://www.w3.org/2000/01/rdf-schema#label> "SoloTraveller" .
+# 
+# http://example.org/ontology#Survey
+<http://example.org/ontology#Survey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <http://example.org/ontology#Country> .
+_:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/ontology#hasCountry> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/ontology#Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <http://example.org/ontology#Date> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/ontology#hasDateFlight> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/ontology#Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#onClass> <http://example.org/ontology#Date> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/ontology#hasDatePublished> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/ontology#Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <http://example.org/ontology#City> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/ontology#hasDestination> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/ontology#Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <http://example.org/ontology#City> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/ontology#hasOrigin> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/ontology#Survey> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection or set of questions aimed at gathering information from respondents to derive insights on various topics" .
+<http://example.org/ontology#Survey> <http://www.w3.org/2000/01/rdf-schema#label> "Survey" .
+# 
+# http://example.org/ontology#Traveller
+<http://example.org/ontology#Traveller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/ontology#Traveller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#Traveller> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual who travels" .
+<http://example.org/ontology#Traveller> <http://www.w3.org/2000/01/rdf-schema#label> "Traveller" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://example.org/ontology#AirBus380
+<http://example.org/ontology#AirBus380> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ontology#AirBus380> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/ontology#AirBus> .
+<http://example.org/ontology#AirBus380> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of plane" .
+<http://example.org/ontology#AirBus380> <http://www.w3.org/2000/01/rdf-schema#label> "AirBus380" .
+<http://example.org/ontology#AirBus380> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/Airbus_A380"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://example.org/ontology#Barcelona
+<http://example.org/ontology#Barcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ontology#Barcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/ontology#City> .
+<http://example.org/ontology#Barcelona> <http://www.w3.org/2000/01/rdf-schema#comment> "City" .
+<http://example.org/ontology#Barcelona> <http://www.w3.org/2000/01/rdf-schema#label> "Barcelona" .
+<http://example.org/ontology#Barcelona> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/List_of_international_airports_by_country"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://example.org/ontology#DateFlight
+<http://example.org/ontology#DateFlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ontology#DateFlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/ontology#Date> .
+<http://example.org/ontology#DateFlight> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of flight" .
+<http://example.org/ontology#DateFlight> <http://www.w3.org/2000/01/rdf-schema#label> "DateFlight" .
+# 
+# http://example.org/ontology#DatePublished
+<http://example.org/ontology#DatePublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ontology#DatePublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/ontology#Date> .
+<http://example.org/ontology#DatePublished> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of published" .
+<http://example.org/ontology#DatePublished> <http://www.w3.org/2000/01/rdf-schema#label> "DatePublished" .
+# 
+# http://example.org/ontology#David
+<http://example.org/ontology#David> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ontology#David> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/ontology#SoloTraveller> .
+<http://example.org/ontology#David> <http://www.w3.org/2000/01/rdf-schema#comment> "Traveller" .
+<http://example.org/ontology#David> <http://www.w3.org/2000/01/rdf-schema#label> "David" .
+# 
+# http://example.org/ontology#Emilio
+<http://example.org/ontology#Emilio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ontology#Emilio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/ontology#Business> .
+<http://example.org/ontology#Emilio> <http://www.w3.org/2000/01/rdf-schema#comment> "Traveller" .
+<http://example.org/ontology#Emilio> <http://www.w3.org/2000/01/rdf-schema#label> "Emilio" .
+# 
+# http://example.org/ontology#Madrid
+<http://example.org/ontology#Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ontology#Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/ontology#City> .
+<http://example.org/ontology#Madrid> <http://www.w3.org/2000/01/rdf-schema#comment> "City" .
+<http://example.org/ontology#Madrid> <http://www.w3.org/2000/01/rdf-schema#label> "Madrid" .
+<http://example.org/ontology#Madrid> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/List_of_international_airports_by_country"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://example.org/ontology#Spain
+<http://example.org/ontology#Spain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ontology#Spain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/ontology#Country> .
+<http://example.org/ontology#Spain> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
+<http://example.org/ontology#Spain> <http://www.w3.org/2000/01/rdf-schema#label> "Spain" .
+<http://example.org/ontology#Spain> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/Category:Countries"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://example.org/ontology#Survey1
+<http://example.org/ontology#Survey1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ontology#Survey1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#Survey1> <http://example.org/ontology#hasCountry> <http://example.org/ontology#Spain> .
+<http://example.org/ontology#Survey1> <http://example.org/ontology#hasDateFlight> <http://example.org/ontology#DateFlight> .
+<http://example.org/ontology#Survey1> <http://example.org/ontology#hasDatePublished> <http://example.org/ontology#DatePublished> .
+<http://example.org/ontology#Survey1> <http://example.org/ontology#hasDestination> <http://example.org/ontology#Madrid> .
+<http://example.org/ontology#Survey1> <http://example.org/ontology#hasOrigin> <http://example.org/ontology#Barcelona> .
+<http://example.org/ontology#Survey1> <http://example.org/ontology#ratingValue> "7"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/ontology#Survey1> <http://example.org/ontology#reviewDate> "2024-04-11T14:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://example.org/ontology#Survey2
+<http://example.org/ontology#Survey2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ontology#Survey2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#Survey2> <http://example.org/ontology#hasCountry> <http://example.org/ontology#Spain> .
+<http://example.org/ontology#Survey2> <http://example.org/ontology#hasDateFlight> <http://example.org/ontology#DateFlight> .
+<http://example.org/ontology#Survey2> <http://example.org/ontology#hasDatePublished> <http://example.org/ontology#DatePublished> .
+<http://example.org/ontology#Survey2> <http://example.org/ontology#hasDestination> <http://example.org/ontology#Madrid> .
+<http://example.org/ontology#Survey2> <http://example.org/ontology#hasOrigin> <http://example.org/ontology#Barcelona> .
+<http://example.org/ontology#Survey2> <http://example.org/ontology#ratingValue> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/ontology#Survey2> <http://example.org/ontology#reviewDate> "2024-04-11T14:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://example.org/ontology#Survey3
+<http://example.org/ontology#Survey3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ontology#Survey3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/ontology#Survey> .
+<http://example.org/ontology#Survey3> <http://example.org/ontology#hasCountry> <http://example.org/ontology#Spain> .
+<http://example.org/ontology#Survey3> <http://example.org/ontology#hasDateFlight> <http://example.org/ontology#DateFlight> .
+<http://example.org/ontology#Survey3> <http://example.org/ontology#hasDatePublished> <http://example.org/ontology#DatePublished> .
+<http://example.org/ontology#Survey3> <http://example.org/ontology#hasDestination> <http://example.org/ontology#Madrid> .
+<http://example.org/ontology#Survey3> <http://example.org/ontology#hasOrigin> <http://example.org/ontology#Barcelona> .
+<http://example.org/ontology#Survey3> <http://example.org/ontology#ratingValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/ontology#Survey3> <http://example.org/ontology#reviewDate> "2024-04-11T14:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,26 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:CoupleLeisure" "base:Rating" "base:FirstClass" "base:FamilyLeisure" "base:Date" "base:MediumValue" "base:City" "base:Aircraft" "base:Boeing" "base:Business" "base:AirBus" "base:Traveller" "base:SeatType" "base:Recommended" "base:Survey" "base:SoloTraveller" "base:HightValue" "base:EconomyClass" "base:Country" "base:BusinessClass" "base:LowValue" ; /*classes style*/
+	"base:City" -> "base:Survey" [ label = "rdfs:subClassOf" ];
+	"base:Date" -> "base:Survey" [ label = "rdfs:subClassOf" ];
+	"base:LowValue" -> "base:Rating" [ label = "rdfs:subClassOf" ];
+	"base:Aircraft" -> "base:Survey" [ label = "rdfs:subClassOf" ];
+	"base:BusinessClass" -> "base:SeatType" [ label = "rdfs:subClassOf" ];
+	"base:Recommended" -> "base:Survey" [ label = "rdfs:subClassOf" ];
+	"base:HightValue" -> "base:Rating" [ label = "rdfs:subClassOf" ];
+	"base:CoupleLeisure" -> "base:Traveller" [ label = "rdfs:subClassOf" ];
+	"base:Country" -> "base:Survey" [ label = "rdfs:subClassOf" ];
+	"base:Boeing" -> "base:Aircraft" [ label = "rdfs:subClassOf" ];
+	"base:SeatType" -> "base:Survey" [ label = "rdfs:subClassOf" ];
+	"base:MediumValue" -> "base:Rating" [ label = "rdfs:subClassOf" ];
+	"base:FamilyLeisure" -> "base:Traveller" [ label = "rdfs:subClassOf" ];
+	"base:SoloTraveller" -> "base:Traveller" [ label = "rdfs:subClassOf" ];
+	"base:AirBus" -> "base:Aircraft" [ label = "rdfs:subClassOf" ];
+	"base:Rating" -> "base:Survey" [ label = "rdfs:subClassOf" ];
+	"base:Business" -> "base:Traveller" [ label = "rdfs:subClassOf" ];
+	"base:FirstClass" -> "base:SeatType" [ label = "rdfs:subClassOf" ];
+	"base:Traveller" -> "base:Survey" [ label = "rdfs:subClassOf" ];
+	"base:EconomyClass" -> "base:SeatType" [ label = "rdfs:subClassOf" ];
+
+}

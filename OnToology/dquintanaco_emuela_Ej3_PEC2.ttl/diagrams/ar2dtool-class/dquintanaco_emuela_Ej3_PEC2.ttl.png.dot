@@ -1,0 +1,37 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:Date" "base:City" "base:Survey" "base:Country" ; /*classes style*/
+	"base:Survey1" -> "base:Barcelona" [ label = "base:hasOrigin" ];
+	"base:Survey1" -> "base:Madrid" [ label = "base:hasDestination" ];
+	"base:Survey1" -> "base:DatePublished" [ label = "base:hasDatePublished" ];
+	"base:Survey1" -> "base:DateFlight" [ label = "base:hasDateFlight" ];
+	"base:Survey1" -> "base:Spain" [ label = "base:hasCountry" ];
+	"http://www.semanticweb.org/emili/ontologies/2024/3/flysatisfaction" -> "urn:absolute:1.0.0" [ label = "owl:versionIRI" ];
+	"base:Survey2" -> "base:Barcelona" [ label = "base:hasOrigin" ];
+	"base:Survey2" -> "base:Madrid" [ label = "base:hasDestination" ];
+	"base:Survey2" -> "base:DatePublished" [ label = "base:hasDatePublished" ];
+	"base:Survey2" -> "base:DateFlight" [ label = "base:hasDateFlight" ];
+	"base:Survey2" -> "base:Spain" [ label = "base:hasCountry" ];
+	"NULL" -> "base:hasDestination" [ label = "owl:onProperty" ];
+	"NULL" -> "base:hasDatePublished" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Country" [ label = "owl:onClass" ];
+	"NULL" -> "base:hasCountry" [ label = "owl:onProperty" ];
+	"NULL" -> "base:City" [ label = "owl:onClass" ];
+	"NULL" -> "base:hasOrigin" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Date" [ label = "owl:onClass" ];
+	"NULL" -> "base:hasDateFlight" [ label = "owl:onProperty" ];
+	"base:Survey3" -> "base:Barcelona" [ label = "base:hasOrigin" ];
+	"base:Survey3" -> "base:Madrid" [ label = "base:hasDestination" ];
+	"base:Survey3" -> "base:DatePublished" [ label = "base:hasDatePublished" ];
+	"base:Survey3" -> "base:DateFlight" [ label = "base:hasDateFlight" ];
+	"base:Survey3" -> "base:Spain" [ label = "base:hasCountry" ];
+	"base:Survey" -> "base:City" [ label = "base:hasDestination" ];
+	"base:Survey" -> "base:Date" [ label = "base:hasDateFlight" ];
+	"base:Survey" -> "base:Date" [ label = "base:hasDatePublished" ];
+	"base:Survey" -> "base:Country" [ label = "base:hasCountry" ];
+	"base:Survey" -> "xsd:dateTime" [ label = "base:reviewDate" ];
+	"base:Survey" -> "base:City" [ label = "base:hasOrigin" ];
+	"base:Survey" -> "xsd:integer" [ label = "base:ratingValue" ];
+
+}
